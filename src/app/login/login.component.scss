@@ -1,0 +1,401 @@
+* {
+  font-family: IBM Plex Sans;
+  font-feature-settings: 'clig' off, 'liga' off;
+}
+
+.register-now {
+  color: #1890ff;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0px;
+}
+
+.login-form-button {
+  margin-bottom: 16px !important;
+  width: 100%;
+  border-radius: 5px;
+  background-color: rgba(25, 117, 255, 1);
+  padding: 0 15px !important;
+  height: 40px;
+}
+
+.ant-tabs-tab {
+  padding: 15px 49px;
+}
+
+.login-form-margin {
+  margin-bottom: 5px;
+}
+
+.hide {
+  background: radial-gradient(52.55% 50% at 50% 50%, rgba(94, 110, 255, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%);
+}
+
+// .hide {
+  // position: relative;
+  // background: radial-gradient(rgba(94, 158, 255, 0.15), rgba(255, 255, 255, 0.15));
+  // overflow: hidden;
+  //  margin-top: 50px;
+  // background-color: rgba(248, 249, 251, 1);
+
+// .hide::before {
+//   content: "";
+//   position: absolute;
+//   top: 246px;
+//   filter: blur(234px);
+//   left: 230px;
+//   background: rgba(94, 110, 255, 1);
+//   width: 108px;
+//   height: 100px;
+//   border-radius: 0 198px 204px 0;
+// }
+
+// .hide::after {
+//   content: "";
+//   position: absolute;
+//   top: 246px;
+//   filter: blur(228px);
+//   right: 150px;
+//   background: rgba(94, 110, 255, 1);
+//   width: 100px;
+//   height: 100px;
+//   border-radius: 198px 0 0 204px;
+// }
+
+img {
+  margin-top: 77px;
+  width: 100%;
+}
+
+.input- {
+  height: 40px;
+  padding: 0 11px !important;
+  border-radius: 5px;
+}
+
+.login {
+  color: #212121;
+  font-size: 20px;
+  font-weight: 700;
+  word-wrap: break-word;
+  margin-bottom: 4px !important;
+  margin-top: 24px;
+  line-height: normal;
+}
+
+.welcome {
+  margin-bottom: 24px;
+  color: #4D4D4D;
+  font-size: 16px !important;
+  font-weight: 400;
+  line-height: 24px;
+  word-wrap: break-word;
+  font-style: normal;
+}
+
+.label {
+  font-size: 16px !important;
+  font-weight: 400 !important;
+  line-height: 24px !important;
+  letter-spacing: 0px !important;
+  color: #212121 !important;
+}
+
+.forget a {
+  font-size: 14px !important;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0px;
+  font-style: normal;
+  color: var(--black-black, #212121);
+}
+
+nz-header {
+  display: flex;
+  justify-content: space-between;
+  background-color: white !important;
+  background: fixed;
+  padding: 0 80px !important;
+}
+
+.row {
+  flex-wrap: nowrap !important;
+}
+
+.logo {
+  color: rgba(25, 117, 255, 1);
+  font-weight: bold;
+}
+
+nz-content {
+  padding: 80px;
+  background-color: rgba(248, 249, 251, 1);
+}
+
+@media (max-width:576px) {
+  nz-content {
+    padding: 0;
+  }
+
+  .form-card {
+    border-radius: 0 !important;
+    padding: 0;
+  }
+}
+
+.inner-content {
+  background: #fff;
+}
+
+.dropdown-but {
+  border: none;
+  background-color: white
+}
+
+.unhide {
+  flex: 1;
+  max-width: 100%;
+}
+
+
+.welcome {
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.forget {
+  width: 100% !important;
+}
+
+.forget a {
+  color: black !important;
+}
+
+@media (min-width:422px) and (max-width: 502px) {
+  .welcome {
+    font-size: 12px;
+  }
+}
+
+@media (max-width:421px) {
+  .welcome {
+    font-size: 12px;
+  }
+}
+
+lpx-language-selection {
+  display: none !important;
+}
+
+.container {
+  margin-top: 49px;
+  display: flex;
+  justify-content: center;
+}
+
+.container span {
+  font-size: 14px !important;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0px;
+  color: #636363;
+  font-style: normal;
+}
+
+.account {
+  text-align: initial;
+}
+
+.account span {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0px;
+}
+
+nz-card {
+  background-color: rgba(248, 249, 251, 1);
+}
+
+.form-card {
+  background-color: white;
+  padding: 25px !important;
+  border-radius: 12px;
+}
+
+@media (min-width:767px) {
+  .form-card {
+    box-shadow: 0px 0px 10px 0px rgba(28, 39, 49, 0.03);
+  }
+}
+
+nz-card.ant-card-body {
+  padding: 0px !important;
+}
+
+.fi {
+  margin-right: 4px;
+}
+
+@media (min-width:992px) {
+
+  .form-card {
+    text-align: center;
+  }
+
+  .login {
+    text-align: initial;
+  }
+
+  .forget {
+    text-align: end !important;
+  }
+
+  .welcome {
+    text-align: initial;
+  }
+}
+
+@media (max-width:992px) {
+  .hide {
+    display: none;
+  }
+
+  .img {
+    display: none;
+  }
+
+  .unhide {
+    margin-left: 0 !important;
+  }
+}
+
+@media (min-width:768px)and (max-width:992px) {
+
+  .form-card {
+    text-align: center;
+  }
+
+  .login {
+    text-align: initial;
+  }
+
+  .forget {
+    text-align: end !important;
+  }
+
+  .welcome {
+    text-align: initial;
+  }
+}
+
+@media (max-width:767px) {
+  .form-card {
+    text-align: center;
+  }
+
+  .login {
+    text-align: initial;
+  }
+
+  .forget {
+    text-align: end !important;
+  }
+
+  .welcome {
+    text-align: initial;
+  }
+}
+
+@media (max-width:280px) {
+  .register-button {
+    padding: 0 0 !important;
+  }
+
+  .login-button {
+    padding: 0 0 !important;
+  }
+
+  .container {
+    display: block;
+  }
+
+  nz-header {
+    padding: 0 24px !important;
+  }
+}
+
+@media (max-width:360px) {
+  .register-button {
+    padding: 0 0 !important;
+  }
+
+  .login-button {
+    padding: 0 0 !important;
+  }
+
+  nz-header {
+    padding: 0 24px !important;
+  }
+}
+
+@media (min-width:279) and (max-width:360px) {
+  .container {
+    display: block;
+  }
+
+  .form-card {
+    padding: 0 !important;
+  }
+
+  nz-header {
+    padding: 0 25px !important;
+  }
+}
+
+.class-button {
+  display: flex;
+  padding: 1px;
+  align-items: flex-start;
+  gap: 16px;
+  align-self: stretch;
+  border-radius: 7px;
+  border: 1px solid var(--black-black-100, #E6E6E6);
+}
+
+.login-button {
+  display: flex;
+  padding: 12px 40px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex: 1 0 0;
+  border-radius: 5px;
+  background: var(--primary-primary-100, #DBE4FE);
+  color: rgba(25, 117, 255, 1);
+  height: 48px;
+}
+
+.register-button {
+  display: flex;
+  padding: 12px 40px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex: 1 0 0;
+  border-radius: 5px;
+  color: rgba(33, 33, 33, 1);
+  border: none;
+  height: 48px;
+}
+
+@media (max-width:414px) {
+  .form-card {
+    padding: 0 !important;
+  }
+
+  nz-header {
+    padding: 0 25px !important;
+  }
+}

@@ -1,0 +1,86 @@
+<div class="page-margin">
+  <nz-layout>
+    <nz-header>
+      <div class="logo">OutReach</div>
+      <button class="dropdown-but" nz-dropdown nzTrigger="click" [nzDropdownMenu]="menu">
+        <span class="fi fi-us fis"></span>En
+        <span nz-icon nzType="down" nzTheme="outline"></span>
+      </button>
+      <nz-dropdown-menu #menu="nzDropdownMenu">
+        <ul nz-menu>
+          <li nz-menu-item><span class="fi fi-us fis"></span>En</li>
+          <li nz-menu-item> <span class="fi fi-sa fis"></span>العربية</li>
+          <li nz-menu-item><span class="fi fi-fr fis"></span>French</li>
+          <li nz-menu-item><span class="fi fi-de fis"></span>German</li>
+          <li nz-menu-item><span class="fi fi-it fis"></span>Italian</li>
+          <li nz-menu-item><span class="fi fi-cn fis"></span>Chinese</li>
+
+
+        </ul>
+      </nz-dropdown-menu>
+
+    </nz-header>
+    <nz-content>
+      <div nz-row class="row">
+        <div class="hide" nz-col nzLg="8" nzXl="8">
+          <img nz-image nzSrc="assets/images/G.png" alt="1">
+        </div>
+        <div class="unhide" nz-col nzXs="24" nzSm="12" nzMd="8" nzLg="12" nzXl="12" nzOffset="4">
+
+          <nz-card class="form-card">
+
+
+            <div class="class-button">
+              <button nz-button class="login-button">Login</button>
+
+              <button nz-button class="register-button">Register</button>
+            </div>
+
+            <h5 class="login">Login</h5>
+            <p class="welcome">Welcome Back! please Enter Your Data Here</p>
+            <form nz-form nzLayout="vertical" [formGroup]="validateForm" class="login-form" (ngSubmit)="submitForm()">
+              <nz-form-item>
+                <nz-form-label
+                  style="font-size: 16px !important;font-weight: 400 !important;line-height: 24px !important;letter-spacing: 0px !important;"
+                  class="label" nzFor="email">E-mail</nz-form-label>
+                <nz-form-control nzErrorTip="The input is not valid E-mail!">
+                  <input class="input-" nz-input formControlName="email" id="email" />
+                </nz-form-control>
+              </nz-form-item>
+              <nz-form-item>
+                <nz-form-label
+                  style="font-size: 16px !important;font-weight: 400 !important;line-height: 24px !important;letter-spacing: 0px !important;"
+                  class="label" nzFor="password">Password</nz-form-label>
+                <nz-form-control nzErrorTip="Please input your Password!">
+                  <nz-input-group class="input-" [nzSuffix]="suffixIconEye">
+                    <input nz-input type="password" id="password" formControlName="password" />
+                  </nz-input-group>
+                  <ng-template #suffixIconEye>
+                    <span nz-icon nzType="eye"></span>
+                  </ng-template>
+                  <div class="forget">
+                    <a class="login-form-forgot">Forget password?</a>
+                  </div>
+                </nz-form-control>
+              </nz-form-item>
+              <div nz-row class="login-form-margin">
+
+              </div>
+              <button nz-button class="login-form-button login-form-margin" [nzType]="'primary'">Log in</button>
+              <div class="account">
+                <span>Don't have an account?</span>
+                <a class="register-now">register now!</a>
+              </div>
+
+            </form>
+            <div class="container">
+              <span><a>Privacy Policy</a></span>
+              <span><a>-</a></span>
+              <span><a>Terms of Service</a></span>
+            </div>
+          </nz-card>
+        </div>
+      </div>
+    </nz-content>
+  </nz-layout>
+</div>

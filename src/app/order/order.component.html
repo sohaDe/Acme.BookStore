@@ -1,0 +1,90 @@
+
+
+<body> 
+    <nz-card class="size">
+    <div class="list">
+        <ul nz-menu>
+            <li nz-menu-item (click)="filterTable('All Orders')"><a>All Orders</a></li>
+            <li nz-menu-item (click)="filterTable('New')"><a>New</a></li>
+            <li nz-menu-item (click)="filterTable('Accepted')"><a>Accepted</a></li>
+            <li nz-menu-item (click)="filterTable('Unacceptable')"><a>Unacceptable</a></li>
+            <li nz-menu-item (click)="filterTable('Ready')"><a>Ready</a></li>
+            <li nz-menu-item (click)="filterTable('Completed')"><a>Completed</a></li>
+        </ul>
+    </div>
+    <br>
+
+    <div nz-row nzSpaceBetween >
+        <div class="res" nzXs="24" nzSm="8"  nzMd="6" nzLg="6" nz-col nzSpan="6">
+            <ng-template #suffixIconSearch>
+                <span nz-icon nzType="search"></span>
+            </ng-template>
+            <nz-input-group [nzSuffix]="suffixIconSearch">
+                <input type="text" #searchText nz-input placeholder="Search" (keyup)="search(searchText.value)" />
+            </nz-input-group>
+        </div>
+       <div nzXs="8" nzSm="4"  nzMd="4" nzLg="4" class="button-right" nz-col nzSpan="4" nzOffset="8">
+            <button nz-button (click)="filterByDate()">Filter by <span nz-icon nzType="filter"
+                    nzTheme="outline"></span></button></div>
+        <div nzXs="12" nzSm="6"  nzMd="6" nzLg="6" nz-col nzSpan="6">
+            <!-- <nz-date-picker [nzDisabledDate]="disabledStartDate"  [(ngModel)]="FromDate" nzPlaceHolder="FromDate" (nzOnOpenChange)="handleStartOpenChange($event)"></nz-date-picker>
+            <nz-date-picker #endDatePicker [nzDisabledDate]="disabledEndDate"  [(ngModel)]="ToDate" nzPlaceHolder="ToDate" (nzOnOpenChange)="handleEndOpenChange($event)"></nz-date-picker> -->
+<nz-range-picker  [(ngModel)]="dateRange" (ngModelChange)="onChange($event)"></nz-range-picker>
+        </div> 
+
+    </div>
+
+    <nz-table class="nz-responsive" nzSize="" [nzScroll]="{ x: '800px' , y: '240px'}"  
+        #basicTable [nzData]="listOfData" >
+        <!-- [nzTotal]="order.totalCount" -->
+        
+        <thead>
+            <tr>
+                <th nzWidth="70px" nzLeft lass="">Order Id</th>
+                <th  >Customer</th>
+                <th >Order Price</th>
+                <th >Order Date</th>
+                <th >Order Type</th>
+                <th >Sales Channel</th>
+                <th >Payment</th>
+                <th >shipping</th>
+                <th nzRight>Order Status</th>    
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let data of basicTable.data">
+                <ng-container *ngIf="!filteredStatus.length || filteredStatus.includes(data.status)">
+                    <td nzLeft >{{ data.id }}#</td>
+                    <td  >{{data.customer}}</td>
+                    <td>{{data.price}}$</td>
+                    <td>{{ data.date}}</td>
+                    <td  >{{ data.type }}</td>
+                    <td  >{{ data.salesChannel }}</td>
+                    <!-- <td nzRight><nz-tag [nzColor]="data.payment == 'Unpaid' ? 'red' : 'green'"> {{data.payment}}</nz-tag></td> -->
+                    <td >
+                        <span nz-icon [style.color]="'green'" *ngIf="data.payment == 'Unpaid'" nzType="check"></span>
+                        <span nz-icon [style.color]="'red'" *ngIf="data.payment !== 'Unpaid'" nzType="close"></span>
+                    </td>
+                    <td >
+                        <span nz-icon [style.color]="'green'" *ngIf="data.shipping == 'shipped'" nzType="check"></span>
+                        <span nz-icon [style.color]="'red'" *ngIf="data.shipping !== 'shipped'" nzType="close"></span>
+                    </td>
+                    <td nzRight><nz-tag [nzColor]="getColor(data.status)">{{data.status}}</nz-tag></td>
+
+                </ng-container>
+            </tr>
+        </tbody>
+    </nz-table>
+</nz-card>
+</body>
+<!-- <th  >Order DeliveryType</th>
+                <th  >Order shippingStatus</th>
+                <th  >Order Total</th>
+                <th  >Order isScheduled</th>
+                <th  >Order salesChannel</th>
+                <th  >Order linesCount</th> -->
+ <!-- <td>{{::Enum:DeliveryType.' + order.deliveryType | abpLocalization}}</td>
+                    <td>{{ data.shippingStatus }}</td>
+                    <td>{{ data.total }}</td>
+                    <td>{{ data.isScheduled }}</td>
+                    <td>{{ data.salesChannel }}</td> -->

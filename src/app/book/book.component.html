@@ -1,0 +1,110 @@
+<!-- <nz-card nzTitle=" {{ '::Menu:Books' | abpLocalization }}" [nzExtra]="extraTemplate">
+  <ng-template #extraTemplate>
+  <button style="text-align: end;padding-top: 2px;" (click)="createBook()" id="create" nz-button nzType="primary">
+    <span nz-icon nzType="plus" nzTheme="outline"></span>
+    {{ '::NewBook' | abpLocalization }}
+  </button>
+</ng-template>
+  <nz-table #basicTable [nzData]="book.items" [nzTotal]="book.totalCount">
+
+    <thead>
+      <tr>
+        <th>{{'::Actions' | abpLocalization}}</th>
+        <th prop="name">{{'::Name' | abpLocalization}} </th>
+        <th>{{'::Type' | abpLocalization}}</th>
+        <th>{{'::PublishDate' | abpLocalization}}</th>
+        <th>{{'::Price' | abpLocalization}}</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let book of basicTable.data">
+        <td>
+
+          <a nz-dropdown nzTrigger="click" [nzDropdownMenu]="menu">
+            {{ '::Actions' | abpLocalization }}<span nz-icon nzType="setting"></span>
+          </a>
+          <nz-dropdown-menu #menu="nzDropdownMenu">
+            <ul nz-menu>
+              <li nz-menu-item>
+                <button ngbDropdownItem nz-button nz-type="primary" (click)="editBook(book.id)">
+                  {{ '::Edit' | abpLocalization }}
+                </button>
+              </li>
+              <li nz-menu-item>
+                <button ngbDropdownItem nz-button nz-type="primary" (click)="delete(book.id)">
+                  {{ '::Delete' | abpLocalization }}
+                </button>
+              </li>
+
+            </ul>
+          </nz-dropdown-menu>
+
+        </td>
+        <td>{{book.name}}</td>
+        <td> {{ '::Enum:BookType.' + book.type | abpLocalization }} </td>
+        <td>{{ book.publishDate | date }}</td>
+        <td>{{ book.price | currency }}</td>
+      </tr>
+    </tbody>
+
+  </nz-table>
+
+</nz-card>
+<nz-modal [(nzVisible)]=" isModalOpen" (nzOnCancel)="handleCancel()">
+  <div *nzModalTitle>
+    <h3>{{ (selectedBook.id ? '::Edit' : '::NewBook' ) | abpLocalization }}</h3>
+  </div>
+  <div *nzModalContent>
+    <form nz-form [formGroup]="form" (ngSubmit)="save()">
+      <nz-form-item>
+        <nz-form-label [nzSm]="6" [nzXs]="24" nzRequired nzfor="author-id">Author</nz-form-label>
+        <nz-select id="author-id" formControlName="authorId">
+          <nz-option nzLabel="Select author" [nzValue]="null">Select author</nz-option>
+          <nz-option [nzLabel]="author.id" [nzValue]="author.id" *ngFor="let author of authors$ | async">
+            {{ author.name }}</nz-option>
+        </nz-select>
+      </nz-form-item>
+
+      <nz-form-item>
+        <nz-form-label [nzSm]="6" [nzXs]="24" nzRequired nzfor="book-name">Name</nz-form-label>
+        <nz-form-control [nzSm]="14" [nzXs]="24">
+          <input nz-input type="text" id="book-name" formControlName="name" />
+        </nz-form-control>
+      </nz-form-item>
+
+      <nz-form-item>
+        <nz-form-label [nzSm]="6" [nzXs]="24" nzRequired nz-for="book-price">Price</nz-form-label>
+        <nz-form-control [nzSm]="14" [nzXs]="24">
+          <input nz-input type="number" id="book-price" formControlName="price" />
+        </nz-form-control>
+      </nz-form-item>
+
+      <nz-form-item>
+        <nz-form-label [nzSm]="6" [nzXs]="24" nzRequired nz-for="book-type">Type</nz-form-label>
+        <nz-select formControlName="type" id="book-type">
+          <nz-option nzLabel="Select a book type" [nzValue]="null">Select a book type</nz-option>
+          <nz-option [nzLabel]="type.value" [nzValue]="type.value" *ngFor="let type of bookTypes">
+            {{ '::Enum:BookType.' + type.value | abpLocalization }}</nz-option>
+        </nz-select>
+      </nz-form-item>
+
+      <nz-form-item>
+        <nz-form-label [nzSm]="6" [nzXs]="24" nzRequired>Publish date</nz-form-label>
+        <nz-form-control [nzSm]="14" [nzXs]="24">
+          <nz-date-picker formControlName="publishDate"></nz-date-picker>
+        </nz-form-control>
+      </nz-form-item>
+    </form>
+  </div>
+
+  <div *nzModalFooter>
+    <button nz-type="primary" (click)="handleCancel()" nz-button>
+      {{ '::Close' | abpLocalization }}
+    </button>
+
+    <button nz-type="primary" nz-button (click)="save()" [disabled]="form.invalid">
+      {{ '::Save' | abpLocalization }}
+    </button>
+  </div>
+
+</nz-modal> -->
