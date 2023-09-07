@@ -2,15 +2,26 @@
 
 <body> 
     <nz-card class="size">
-    <div class="list">
-        <ul nz-menu>
+    <!-- <div class="list"> -->
+        <div>
+        <nz-tabset>
+            <nz-tab nzTitle="All Orders"></nz-tab>
+            <nz-tab nzTitle="New"></nz-tab>
+            <nz-tab nzTitle="Awaiting Payment"></nz-tab>
+            <nz-tab nzTitle="Payment Completed"></nz-tab>
+            <nz-tab nzTitle="Awaiting Shipment"></nz-tab>
+            <nz-tab nzTitle="Shipment Completed"></nz-tab>
+            <nz-tab nzTitle="Ready"></nz-tab>
+            <nz-tab nzTitle="Completed"></nz-tab>
+          </nz-tabset>
+        <!-- <ul nz-menu>
             <li nz-menu-item (click)="filterTable('All Orders')"><a>All Orders</a></li>
             <li nz-menu-item (click)="filterTable('New')"><a>New</a></li>
             <li nz-menu-item (click)="filterTable('Accepted')"><a>Accepted</a></li>
             <li nz-menu-item (click)="filterTable('Unacceptable')"><a>Unacceptable</a></li>
             <li nz-menu-item (click)="filterTable('Ready')"><a>Ready</a></li>
             <li nz-menu-item (click)="filterTable('Completed')"><a>Completed</a></li>
-        </ul>
+        </ul> -->
     </div>
     <br>
 

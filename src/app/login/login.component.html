@@ -1,7 +1,10 @@
 <div class="page-margin">
   <nz-layout>
     <nz-header>
-      <div class="logo">OutReach</div>
+      <div class="logo">
+        <!-- OutReach -->
+        <img nz-image nzSrc="assets/images/logo.png" alt="logo">
+      </div>
       <button class="dropdown-but" nz-dropdown nzTrigger="click" [nzDropdownMenu]="menu">
         <span class="fi fi-us fis"></span>En
         <span nz-icon nzType="down" nzTheme="outline"></span>
@@ -30,14 +33,13 @@
           <nz-card class="form-card">
 
 
-            <div class="class-button">
-              <button nz-button class="login-button">Login</button>
 
-              <button nz-button class="register-button">Register</button>
-            </div>
-
-            <h5 class="login">Login</h5>
-            <p class="welcome">Welcome Back! please Enter Your Data Here</p>
+            <div class="first">
+              <span class="first-login">Login</span>
+              <span class="first-welcome">Welcome Back! spanlease Enter Your Data Here</span>
+          </div>
+          <!-- <h5 class="login">Login</h5>
+          <p class="welcome">Welcome Back! please Enter Your Data Here</p> -->
             <form nz-form nzLayout="vertical" [formGroup]="validateForm" class="login-form" (ngSubmit)="submitForm()">
               <nz-form-item>
                 <nz-form-label

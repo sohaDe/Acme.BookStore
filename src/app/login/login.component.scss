@@ -63,7 +63,7 @@
 //   border-radius: 198px 0 0 204px;
 // }
 
-img {
+.hide img {
   margin-top: 77px;
   width: 100%;
 }
@@ -80,7 +80,6 @@ img {
   font-weight: 700;
   word-wrap: break-word;
   margin-bottom: 4px !important;
-  margin-top: 24px;
   line-height: normal;
 }
 
@@ -220,7 +219,7 @@ nz-card {
 
 .form-card {
   background-color: white;
-  padding: 25px !important;
+  padding: 34px !important;
   border-radius: 12px;
 }
 
@@ -309,13 +308,7 @@ nz-card.ant-card-body {
 }
 
 @media (max-width:280px) {
-  .register-button {
-    padding: 0 0 !important;
-  }
 
-  .login-button {
-    padding: 0 0 !important;
-  }
 
   .container {
     display: block;
@@ -327,14 +320,6 @@ nz-card.ant-card-body {
 }
 
 @media (max-width:360px) {
-  .register-button {
-    padding: 0 0 !important;
-  }
-
-  .login-button {
-    padding: 0 0 !important;
-  }
-
   nz-header {
     padding: 0 24px !important;
   }
@@ -354,42 +339,6 @@ nz-card.ant-card-body {
   }
 }
 
-.class-button {
-  display: flex;
-  padding: 1px;
-  align-items: flex-start;
-  gap: 16px;
-  align-self: stretch;
-  border-radius: 7px;
-  border: 1px solid var(--black-black-100, #E6E6E6);
-}
-
-.login-button {
-  display: flex;
-  padding: 12px 40px;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  flex: 1 0 0;
-  border-radius: 5px;
-  background: var(--primary-primary-100, #DBE4FE);
-  color: rgba(25, 117, 255, 1);
-  height: 48px;
-}
-
-.register-button {
-  display: flex;
-  padding: 12px 40px;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  flex: 1 0 0;
-  border-radius: 5px;
-  color: rgba(33, 33, 33, 1);
-  border: none;
-  height: 48px;
-}
-
 @media (max-width:414px) {
   .form-card {
     padding: 0 !important;
@@ -398,4 +347,31 @@ nz-card.ant-card-body {
   nz-header {
     padding: 0 25px !important;
   }
+}
+
+.first{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 4px;
+  align-self: stretch;
+  margin-bottom: 24px;
+}
+.first-login{
+  color: var(--black-black, #212121);
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  align-self: stretch;
+  text-align: initial;
+}
+.first-welcome{
+  color: var(--black-black-800, #4D4D4D);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-align: initial;
 }

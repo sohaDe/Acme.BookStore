@@ -14,12 +14,13 @@ import { NzImageModule } from 'ng-zorro-antd/image';
 import { NzDropDownModule } from 'ng-zorro-antd/dropdown';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NzIconModule } from 'ng-zorro-antd/icon';
-import { NzTabsModule } from 'ng-zorro-antd/tabs';
 import { NzRadioModule } from 'ng-zorro-antd/radio';
 import { NzDatePickerModule } from 'ng-zorro-antd/date-picker';
 import { NzListModule } from 'ng-zorro-antd/list';
 import { NzTableModule } from 'ng-zorro-antd/table';
 import { NzTagModule } from 'ng-zorro-antd/tag';
+import { NzTabsModule } from 'ng-zorro-antd/tabs';
+
 
 
 @NgModule({
@@ -47,6 +48,7 @@ import { NzTagModule } from 'ng-zorro-antd/tag';
     NzListModule,
     NzTableModule,
     NzTagModule,
+    NzTabsModule
 
   ],
   exports: [
@@ -71,6 +73,7 @@ import { NzTagModule } from 'ng-zorro-antd/tag';
     NzListModule,
     NzTableModule,
     NzTagModule,
+    NzTabsModule
   ],
   providers: []
 })
